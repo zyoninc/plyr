@@ -1,6 +1,6 @@
 Package.describe({
     name: 'zyon:plyr',
-    version: '0.0.1',
+    version: '0.0.2',
     summary: 'Plyr (v1.3.6) repackaged for Meteor',
     git: 'https://github.com/zyoninc/plyr.git',
     documentation: 'README.md'
@@ -8,8 +8,9 @@ Package.describe({
 
 Package.onUse(function(api) {
     api.versionsFrom('1.2.0.1');
-    api.use('ecmascript');
+    //api.use('ecmascript');
     api.use('jquery', 'client');
+
     var path = Npm.require('path');
     var assetPath = path.join('files/sprite/');
     api.addFiles('files/plyr.css', 'client');
@@ -33,7 +34,7 @@ Package.onUse(function(api) {
 });
 
 Package.onTest(function(api) {
-    api.use('ecmascript');
+    //api.use('ecmascript');
     api.use('tinytest');
     api.use('zyon:plyr');
 });
