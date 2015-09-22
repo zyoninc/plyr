@@ -14,7 +14,7 @@ Package.onUse(function(api) {
     var assetPath = path.join('files/sprite/');
     api.addFiles('files/plyr.css', 'client');
     api.addFiles('files/plyr.js', 'client');
-    api.addFiles('files/sprite.svg', 'client');
+    api.addAssets('files/sprite.svg', 'client');
 
     var assetFiles = [
         assetPath + 'icon-captions-off.svg',
@@ -29,7 +29,7 @@ Package.onUse(function(api) {
         assetPath + 'icon-rewind.svg',
         assetPath + 'icon-volume.svg'
     ];
-    api.add_files(assetFiles, 'client');
+    api.addAssets(assetFiles, 'client');
 });
 
 Package.onTest(function(api) {
